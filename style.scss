@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+$bg-colorNoHov: rgb(248, 37, 86);
+$bg-colorYesHov: rgb(91, 238, 17);
+
+$bg-colorNo: rgb(212, 95, 122);
+$bg-colorYes: rgb(155, 204, 131);
+
+$rotationTime: 0.3s;
+
+.box {
+  background-color: cadetblue;
+  height: 100vh;
+  width: 100vw;
+  font-size: 50px;
+}
+
+.switch {
+  position: relative;
+  background-color: #dbd3ad;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.fas {
+  position: absolute;
+ 
+  left: 0;
+  top: 0;
+  border-radius: 51%;
+  margin: 5px;
+  transition-duration: $rotationTime;
+}
+
+.switch:hover {
+  cursor: pointer;
+}
+.fa-times-circle:hover {
+  background-color: $bg-colorNoHov;
+}
+.fa-check-circle:hover {
+  background-color: $bg-colorYesHov;
+}
+
+.fa-times-circle {
+  background-color: $bg-colorNo;
+}
+.fa-check-circle {
+  background-color: $bg-colorYes;
+}
+
+.iconTurnYes {
+  transform: rotateY(90deg);
+}
+
+.iconTurnNo {
+  transform: rotateY(-90deg);
+}
+
+.iconDelay {
+  transition-delay: 0.2s;
+}
